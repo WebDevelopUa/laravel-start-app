@@ -20,7 +20,15 @@ composer run-script post-create-project-cmd
 ```
 php artisan serve
 php artisan serve --port=8080
+```
+
+```
 php artisan config:clear
+php artisan config:cache
+php artisan optimize
+php artisan cache:clear
+php artisan route:cache
+php artisan view:clear
 ```
 
 Starting Laravel development server: [http://127.0.0.1:8000](http://127.0.0.1:8000)
@@ -77,6 +85,15 @@ extension=openssl
 openssl.cafile=ext/php_openssl.dll
 openssl.cafile=C:\Program Files\PHP\v7.4\ext\php_openssl.dll
 ```
+
+## Deployment
+
+* [Deploy to Hosting](https://www.ukraine.com.ua/wiki/hosting/frameworks/laravel/transfer-to-hosting/)
+  using [SSH](https://www.ukraine.com.ua/wiki/hosting/ssh/connect/)
+
+* [Video tutorial](https://youtu.be/h6CjHhZPQBI)
+
+* [Documentation](https://laravel.com/docs/8.x/deployment)
 
 ---
 
