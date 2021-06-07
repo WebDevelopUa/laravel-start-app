@@ -112,7 +112,7 @@ openssl.cafile=C:\Program Files\PHP\v7.4\ext\php_openssl.dll
     -   PHP 8
     -   MS Drivers 5.9 for PHP 8 for SQL Server
 -   [Blade Templates Syntax Documentation](https://laravel.com/docs/8.x/blade)
--   []()
+-   [prettier/plugin-php](https://github.com/prettier/plugin-php)
 
 ---
 
