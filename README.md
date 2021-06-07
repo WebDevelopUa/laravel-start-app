@@ -11,7 +11,7 @@ npm i
 composer i
 ```
 
-``` 
+```
 composer run-script post-autoload-dump
 composer run-script post-root-package-install
 composer run-script post-create-project-cmd
@@ -37,23 +37,22 @@ Starting Laravel development server: [http://127.0.0.1:8000](http://127.0.0.1:80
 
 Check [log file](storage/logs/laravel.log)
 
-
-----
+---
 
 ## Requirements:
 
-1) PHP 7.4
-2) Composer
-3) Node.js 16
-4) MSQL Server, Apache Server (XAMPP) or alternatives
+1. PHP 7.4
+2. Composer
+3. Node.js 16
+4. MSQL Server, Apache Server (XAMPP) or alternatives
 
 ---
 
 ## Composer
 
-1) install Composer - download & run installer
+1. install Composer - download & run installer
 
-2) check composer version:
+2. check composer version:
 
 ```
 composer -V
@@ -61,23 +60,23 @@ composer -V
 Composer version 2.1.1 2021-06-04 08:46:46
 ```
 
-3) init project
+3. init project
 
-``` 
+```
 composer init
 ```
 
 ## Laravel
 
-1) install Laravel - Installation Via Composer
+1. install Laravel - Installation Via Composer
 
-``` 
+```
 composer create-project laravel/laravel laravel-start-app
 ```
 
-2) edit [php.ini](php.ini) uncomment line => `;extension_dir = "ext"`, `;extension=fileinfo`, `;extension=openssl`
+2. edit [php.ini](php.ini) uncomment line => `;extension_dir = "ext"`, `;extension=fileinfo`, `;extension=openssl`
 
-``` 
+```
 php --ini
 extension_dir = "ext"
 extension=fileinfo
@@ -88,52 +87,53 @@ openssl.cafile=C:\Program Files\PHP\v7.4\ext\php_openssl.dll
 
 ## Deployment
 
-* [Deploy to Hosting](https://www.ukraine.com.ua/wiki/hosting/frameworks/laravel/transfer-to-hosting/)
-  using [SSH](https://www.ukraine.com.ua/wiki/hosting/ssh/connect/)
+-   [Deploy to Hosting](https://www.ukraine.com.ua/wiki/hosting/frameworks/laravel/transfer-to-hosting/)
+    using [SSH](https://www.ukraine.com.ua/wiki/hosting/ssh/connect/)
 
-* [Video tutorial](https://youtu.be/h6CjHhZPQBI)
+-   [Video tutorial](https://youtu.be/h6CjHhZPQBI)
 
-* [Documentation](https://laravel.com/docs/8.x/deployment)
+-   [Documentation](https://laravel.com/docs/8.x/deployment)
 
-* [Free Domains](https://www.freenom.com/)
+-   [Free Domains](https://www.freenom.com/)
 
 ---
 
 # links:
 
-* [Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.](https://nodejs.org/)
-* [Composer 2.0 - A Dependency Manager for PHP](https://getcomposer.org)
-* [Download Composer](https://getcomposer.org/download/)
-* [Download and run Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe)
-* [Laravel The Full Stack Framework](https://laravel.com)
-* [Laravel Installation](https://laravel.com/docs/8.x/installation)
-* [PHP Install](https://www.php.net/manual/ru/install.php)
-* [XAMPP](https://www.apachefriends.org/ru/index.html)
-* [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx):
-    - PHP 8
-    - MS Drivers 5.9 for PHP 8 for SQL Server
-* [Blade Templates Syntax Documentation](https://laravel.com/docs/8.x/blade)
-* []()
+-   [Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.](https://nodejs.org/)
+-   [Composer 2.0 - A Dependency Manager for PHP](https://getcomposer.org)
+-   [Download Composer](https://getcomposer.org/download/)
+-   [Download and run Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe)
+-   [Laravel The Full Stack Framework](https://laravel.com)
+-   [Laravel Installation](https://laravel.com/docs/8.x/installation)
+-   [PHP Install](https://www.php.net/manual/ru/install.php)
+-   [XAMPP](https://www.apachefriends.org/ru/index.html)
+-   [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx):
+    -   PHP 8
+    -   MS Drivers 5.9 for PHP 8 for SQL Server
+-   [Blade Templates Syntax Documentation](https://laravel.com/docs/8.x/blade)
+-   []()
 
------
+---
 
 # ERRORS
 
 > ### Problem 1
->  - laravel/framework[v8.40.0, ..., 8.x-dev] require league/flysystem ^1.1 -> satisfiable by league/flysystem[1.1.0, ..., 1.x-dev].
->  - league/flysystem[1.1.0, ..., 1.x-dev] require ext-fileinfo * -> it is missing from your system. Install or enable PHP's fileinfo extension.
->  - Root composer.json requires laravel/framework ^8.40 -> satisfiable by laravel/framework[v8.40.0, ..., 8.x-dev].
 >
->  You need to uncomment this line in the php.ini file located in your PHP installation folder:
+> -   laravel/framework[v8.40.0, ..., 8.x-dev] require league/flysystem ^1.1 -> satisfiable by league/flysystem[1.1.0, ..., 1.x-dev].
+> -   league/flysystem[1.1.0, ..., 1.x-dev] require ext-fileinfo \* -> it is missing from your system. Install or enable PHP's fileinfo extension.
+> -   Root composer.json requires laravel/framework ^8.40 -> satisfiable by laravel/framework[v8.40.0, ..., 8.x-dev].
 >
->  ;extension=fileinfo
+> You need to uncomment this line in the php.ini file located in your PHP installation folder:
+>
+> ;extension=fileinfo
 > Remove the semicolon and save the file.
 >
->  extension=fileinfo
+> extension=fileinfo
 >
 > ### Problem 2
 >
-> [Composer\Exception\NoSslException]                                                                                                                                                     
+> [Composer\Exception\NoSslException]  
 > The openssl extension is required for SSL/TLS protection but is not available. If you can not enable the openssl extension, you can disable this error, at your own risk, by setting t  
 > he 'disable-tls' option to true.
 >
@@ -143,8 +143,7 @@ openssl.cafile=C:\Program Files\PHP\v7.4\ext\php_openssl.dll
 >
 > extension_dir = "ext"
 
-
---------------
+---
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
@@ -161,14 +160,14 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in
 many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache)
-  storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   [Simple, fast routing engine](https://laravel.com/docs/routing).
+-   [Powerful dependency injection container](https://laravel.com/docs/container).
+-   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache)
+    storage.
+-   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+-   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+-   [Robust background job processing](https://laravel.com/docs/queues).
+-   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
@@ -188,17 +187,17 @@ becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/
 
 ### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+-   **[Vehikl](https://vehikl.com/)**
+-   **[Tighten Co.](https://tighten.co)**
+-   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+-   **[64 Robots](https://64robots.com)**
+-   **[Cubet Techno Labs](https://cubettech.com)**
+-   **[Cyber-Duck](https://cyber-duck.co.uk)**
+-   **[Many](https://www.many.co.uk)**
+-   **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+-   **[DevSquad](https://devsquad.com)**
+-   **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+-   **[OP.GG](https://op.gg)**
 
 ## Contributing
 
@@ -219,14 +218,13 @@ via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilitie
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-
 ---
 
 # Code writing hints:
 
 ## Create new [Controller](https://laravel.com/docs/8.x/controllers#dependency-injection-and-controllers):
 
-``` 
+```
 php artisan make:controller NewController
 ```
 
@@ -236,7 +234,7 @@ Result: app => Http => Controllers => [NewController.php](app/Http/Controllers/N
 
 routes => [web.php](routes/web.php) => add:
 
-``` 
+```
 use App\Http\Controllers\NewController;
 
 Route::get('/new_controller', [NewController::class, 'index']);
@@ -248,7 +246,7 @@ Result: [http://127.0.0.1:8000/new_controller](http://127.0.0.1:8000/new_control
 
 resources => views => [new_controller_view.blade.php](resources/views/new_controller_view.blade.php) => add:
 
-``` 
+```
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -284,6 +282,6 @@ resources => views => [new_controller_view.blade.php](resources/views/new_contro
 
 ## Edit [NewController.php](app/Http/Controllers/NewController.php) => add:
 
-``` 
+```
         return view('new_controller_view');
 ```
