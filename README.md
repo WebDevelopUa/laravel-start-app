@@ -95,6 +95,8 @@ openssl.cafile=C:\Program Files\PHP\v7.4\ext\php_openssl.dll
 
 * [Documentation](https://laravel.com/docs/8.x/deployment)
 
+* [Free Domains](https://www.freenom.com/)
+
 ---
 
 # links:
@@ -110,7 +112,7 @@ openssl.cafile=C:\Program Files\PHP\v7.4\ext\php_openssl.dll
 * [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx):
     - PHP 8
     - MS Drivers 5.9 for PHP 8 for SQL Server
-* []()
+* [Blade Templates Syntax Documentation](https://laravel.com/docs/8.x/blade)
 * []()
 
 -----
@@ -216,3 +218,72 @@ via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilitie
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+---
+
+# Code writing hints:
+
+## Create new [Controller](https://laravel.com/docs/8.x/controllers#dependency-injection-and-controllers):
+
+``` 
+php artisan make:controller NewController
+```
+
+Result: app => Http => Controllers => [NewController.php](app/Http/Controllers/NewController.php)
+
+## Create new url route:
+
+routes => [web.php](routes/web.php) => add:
+
+``` 
+use App\Http\Controllers\NewController;
+
+Route::get('/new_controller', [NewController::class, 'index']);
+```
+
+Result: [http://127.0.0.1:8000/new_controller](http://127.0.0.1:8000/new_controller)
+
+## Create new view:
+
+resources => views => [new_controller_view.blade.php](resources/views/new_controller_view.blade.php) => add:
+
+``` 
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Controller View | Laravel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+        html {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h2>New Controller View</h2>
+</div>
+</body>
+</html>
+
+```
+
+## Edit [NewController.php](app/Http/Controllers/NewController.php) => add:
+
+``` 
+        return view('new_controller_view');
+```
