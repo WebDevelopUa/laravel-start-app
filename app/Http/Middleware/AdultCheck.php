@@ -17,7 +17,7 @@ class AdultCheck
     public function handle(Request $request, Closure $next)
     {
         if ($request->adult < 18) {
-            return redirect('welcome');
+            return redirect("welcome");
         }
         return $next($request);
     }
