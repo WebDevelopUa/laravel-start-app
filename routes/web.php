@@ -11,4 +11,4 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/new_controller', [NewController::class, 'index']);
+Route::get('/new_controller', [NewController::class, 'index'])-> middleware('adult');

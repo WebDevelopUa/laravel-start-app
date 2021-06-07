@@ -220,9 +220,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ---
 
+---
+
 # Code writing hints:
 
-## Create new [Controller](https://laravel.com/docs/8.x/controllers#dependency-injection-and-controllers):
+## Create new [Controller](https://laravel.com/docs/8.x/controllers#dependency-injection-and-controllers) => run in terminal:
 
 ```
 php artisan make:controller NewController
@@ -285,3 +287,32 @@ resources => views => [new_controller_view.blade.php](resources/views/new_contro
 ```
         return view('new_controller_view');
 ```
+
+## Create new [Middleware](https://laravel.com/docs/8.x/middleware#introduction) => run in terminal:
+
+```
+php artisan make:middleware AdultCheck
+```
+
+Result: app => Http => Middleware => [AdultCheck.php](app/Http/Middleware/AdultCheck.php)
+
+Register Middleware in [Kernel.php](app/Http/Kernel.php) => add:
+
+```
+    protected $routeMiddleware = [
+        'adult' => \App\Http\Middleware\AdultCheck::class,
+           ...
+    ];
+```
+
+routes => [web.php](routes/web.php) => add:
+
+```
+Route::get('/new_controller', [NewController::class, 'index'])-> middleware('adult');
+```
+
+Result: [http://127.0.0.1:8000/new_controller?adult=18](http://127.0.0.1:8000/new_controller?adult=18) => will redirect
+=> [http://127.0.0.1:8000/new_controller](http://127.0.0.1:8000/new_controller)
+
+Result: [http://127.0.0.1:8000/new_controller](http://127.0.0.1:8000/new_controller) => will redirect
+=> [http://127.0.0.1:8000/welcome](http://127.0.0.1:8000/welcome)
