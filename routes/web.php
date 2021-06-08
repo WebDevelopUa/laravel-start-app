@@ -9,8 +9,8 @@ Route::get("/", function () {
 
 Route::get("/welcome", function () {
     return view("welcome");
-});
+})->name("wc");
 
-Route::get("/new_controller", [NewController::class, "index"])->middleware(
-    "adult"
-);
+Route::get("/new_controller", [NewController::class, "index"])
+    ->middleware("adult")
+    ->name("new");

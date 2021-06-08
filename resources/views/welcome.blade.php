@@ -40,7 +40,13 @@
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     <h2  class="text-gray-900 dark:text-white">Hi There!</h2>
                 </div>
-
+                <nav  class="text-gray-900 dark:text-white">
+                    <a href="{{url('/')}}">Home</a>
+                    &#124;
+                    <a href="{{route('wc')}}">Welcome</a>
+                    &#124;
+                    <a href="{{url('/new_controller?adult=18')}}">New</a>
+                </nav>
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
