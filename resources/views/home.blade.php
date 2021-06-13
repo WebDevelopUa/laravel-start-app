@@ -26,9 +26,9 @@
 <div>
     <h2>Homepage</h2>
     <nav>
-        <a href="{{url('/')}}">Home</a>
-        &#124;
         <a href="{{route('wc')}}">Welcome</a>
+        &#124;
+        <a href="{{url('/home')}}">Home</a>
         &#124;
         <a href="{{url('/new_controller?adult=18')}}">New</a>
     </nav>
