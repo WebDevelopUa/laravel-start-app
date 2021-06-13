@@ -109,7 +109,13 @@ php artisan route:clear && php artisan key:generate && php artisan serve
 
 ----
 
-6) ## Other options to fix possible issues:
+6) ## Create `sampledb` dump:
+    - connect to Database: Menu => View => Tool Windows => Database => + => Data Source => MySQL => ... => Test => OK
+    - right click on database connection => Export with mysqldump =>
+      path: `C:/Program Files/MySQL/MySQL Workbench 8.0/mysqldump.exe`
+      => `--result-file="D:\\projects\\!db-dump\\dump-sampleDB-01.sql"`
+
+7) ## Other options to fix possible issues:
 
 ```
 composer run-script post-autoload-dump
@@ -128,11 +134,11 @@ php artisan route:cache
 php artisan view:clear
 ```
 
-7) ## Check Errors
+8) ## Check Errors
 
 View [log file](storage/logs/laravel.log)
 
-8) ## Configure [php.ini](php.ini)
+9) ## Configure [php.ini](php.ini)
 
 ``` 
 php --ini
@@ -162,7 +168,7 @@ openssl.cafile=C:\Program Files\PHP\v7.4\ext\php_openssl.dll
 memory_limit = 128M
 ```
 
-9) ## Laravel 8 Requirements:
+10) ## Laravel 8 Requirements:
 
 1. PHP 7.4
 2. Composer
@@ -178,7 +184,7 @@ memory_limit = 128M
 
 ---
 
-## Composer
+11) ## Composer
 
 1. install Composer - download & run installer
 
@@ -196,7 +202,7 @@ Composer version 2.1.1 2021-06-04 08:46:46
 composer init
 ```
 
-## Laravel
+12) ## Laravel
 
 1. install Laravel - Installation Via Composer
 
@@ -215,7 +221,7 @@ openssl.cafile=ext/php_openssl.dll
 openssl.cafile=C:\Program Files\PHP\v7.4\ext\php_openssl.dll
 ```
 
-## Deployment
+13) ## Deployment
 
 - [Deploy to Hosting](https://www.ukraine.com.ua/wiki/hosting/frameworks/laravel/transfer-to-hosting/)
   using [SSH](https://www.ukraine.com.ua/wiki/hosting/ssh/connect/)
@@ -228,7 +234,7 @@ openssl.cafile=C:\Program Files\PHP\v7.4\ext\php_openssl.dll
 
 ---
 
-# links:
+14) ## Links:
 
 - [Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.](https://nodejs.org/)
 - [Composer 2.0 - A Dependency Manager for PHP](https://getcomposer.org)
@@ -248,10 +254,39 @@ openssl.cafile=C:\Program Files\PHP\v7.4\ext\php_openssl.dll
 - [Jetstream](https://jetstream.laravel.com/2.x/installation.html) => `composer require laravel/jetstream`
   => `php artisan jetstream:install inertia`
 - [Jetstream is designed using Tailwind CSS and offers your choice of Livewire or Inertia scaffolding](https://jetstream.laravel.com/2.x/introduction.html)
+- [How to create a new database in Microsoft SQL Server](https://support.mailessentials.gfi.com/hc/en-us/articles/360015116400-How-to-create-a-new-database-in-Microsoft-SQL-Server)
+- [MS SQL Server - Create Database](https://www.tutorialspoint.com/ms_sql_server/ms_sql_server_create_database.htm)
+- [Create a Database](https://docs.microsoft.com/en-us/sql/relational-databases/databases/create-a-database?view=sql-server-ver15)
+- [Техническая документация по SQL Server](https://docs.microsoft.com/ru-ru/sql/sql-server/?view=sql-server-ver15)
+- [SQL Tutorial](https://www.w3schools.com/sql/default.asp)
+- [Export and import data in PhpStorm](https://www.jetbrains.com/help/phpstorm/exporting-and-importing-data.html)
+- [Import data in PhpStorm](https://www.jetbrains.com/help/phpstorm/import-data.html)
+  ![db1](database/dump/db1.png)
+  ![db2](database/dump/db2.png)
+- [phpMyAdmin 5.1.1](https://www.phpmyadmin.net/downloads/) ~ Current version compatible with PHP 7.1 and newer and
+  MySQL/MariaDB 5.5 and newer.
+- [phpMyAdmin Установка на Windows](https://docs.phpmyadmin.net/uk/latest/setup.html#installing-on-windows)
+- [Getting started with phpmyadmin](https://riptutorial.com/phpmyadmin)
+- [TablePlus](https://tableplus.com/download)
+- [DataGrip](https://www.jetbrains.com/ru-ru/datagrip/)
+- [DATAGRIP QUICK START GUIDE](https://www.jetbrains.com/datagrip/quick-start/)
+- [Connecting DataGrip to MS SQL Server](https://blog.jetbrains.com/datagrip/2016/06/21/connecting-datagrip-to-ms-sql-server/)
+- [DataGrip Database connection](https://www.jetbrains.com/help/datagrip/connecting-to-a-database.html)
+- [DataGrip Импорт и экспорт параметров](https://www.jetbrains.com/ru-ru/datagrip/features/importexport.html)
+- [mysqldump — A Database Backup Program](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html)
+- [pg_dump](https://www.postgresql.org/docs/9.5/app-pgdump.html)
+- [SQL Server Express does not enable TCP support by default](https://www.papercut.com/support/resources/manuals/ng-mf/common/topics/ext-db-specific-ms-sql-express.html)
+- [Extension=php_sqlsrv.dll](https://docs.microsoft.com/en-us/sql/connect/php/download-drivers-php-sql-server?view=sql-server-ver15)
+- [Docker db migrate](https://www.digitalocean.com/community/tutorials/how-to-use-database-migrations-and-seeders-to-abstract-database-setup-in-laravel-ru)
+- [SQL List All Tables](https://www.sqltutorial.org/sql-list-all-tables/)
+- [Examples: Azure Synapse Analytics and Parallel Data Warehouse](https://docs.microsoft.com/en-us/sql/t-sql/functions/db-name-transact-sql?redirectedfrom=MSDN&view=sql-server-ver15)
+- [Tutorial: Build a PHP and MySQL app in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/tutorial-php-mysql-app?pivots=platform-windows)
+- [ MySQL Community Downloads](https://dev.mysql.com/downloads/file/?id=505212)
+- [mysql-installer-web-community-8.0.25.0.msi](https://cdn.mysql.com//Downloads/MySQLInstaller/mysql-installer-web-community-8.0.25.0.msi)
 
 ---
 
-# ERRORS
+15) ## ERRORS
 
 Run in terminal:
 
@@ -300,7 +335,7 @@ php --ini
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+16) ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and
 creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in
@@ -368,7 +403,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-# Code writing hints:
+17) # Code writing hints:
 
 ## Create new [Controller](https://laravel.com/docs/8.x/controllers#dependency-injection-and-controllers) => run in terminal:
 
@@ -465,7 +500,7 @@ Result: [http://127.0.0.1:8000/new_controller](http://127.0.0.1:8000/new_control
 
 ---
 
-# Database
+18) # Database
 
 1. Microsoft SQL Server Management Studio 18 => Server\SQLEXPRESS => Databases => `right click` => Create DB
 2. Azure Data Studio => Create new connection => `Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;`
@@ -506,7 +541,7 @@ Result: [http://127.0.0.1:8000/new_controller](http://127.0.0.1:8000/new_control
 10. [Azure Data Studio](https://docs.microsoft.com/ru-ru/sql/azure-data-studio/download-azure-data-studio?view=sql-server-2017) [download](https://sqlopsbuilds.azureedge.net/stable/0f5cfdc2c8c2433028842e16dc5ac1a65da24292/azuredatastudio-windows-user-setup-1.29.0.exe) ~
     110 MB
 
-## Create Auth
+19) ## Create Auth
 
 In old versions (Laravel 6, 7) run in terminal:
 
@@ -557,7 +592,7 @@ composer dump-autoload
 php artisan optimize
 ```
 
-### Prepare local MySQL
+20) ### Prepare local MySQL
 
 ```
 mysql -u root -p
@@ -586,38 +621,6 @@ SELECT DB_NAME() AS [Current Database];
 SELECT SCHEMA_NAME();
 go
 ```
-
-## Links
-
-- [How to create a new database in Microsoft SQL Server](https://support.mailessentials.gfi.com/hc/en-us/articles/360015116400-How-to-create-a-new-database-in-Microsoft-SQL-Server)
-- [MS SQL Server - Create Database](https://www.tutorialspoint.com/ms_sql_server/ms_sql_server_create_database.htm)
-- [Create a Database](https://docs.microsoft.com/en-us/sql/relational-databases/databases/create-a-database?view=sql-server-ver15)
-- [Техническая документация по SQL Server](https://docs.microsoft.com/ru-ru/sql/sql-server/?view=sql-server-ver15)
-- [SQL Tutorial](https://www.w3schools.com/sql/default.asp)
-- [Export and import data in PhpStorm](https://www.jetbrains.com/help/phpstorm/exporting-and-importing-data.html)
-- [Import data in PhpStorm](https://www.jetbrains.com/help/phpstorm/import-data.html)
-  ![db1](database/dump/db1.png)
-  ![db2](database/dump/db2.png)
-- [phpMyAdmin 5.1.1](https://www.phpmyadmin.net/downloads/) ~ Current version compatible with PHP 7.1 and newer and
-  MySQL/MariaDB 5.5 and newer.
-- [phpMyAdmin Установка на Windows](https://docs.phpmyadmin.net/uk/latest/setup.html#installing-on-windows)
-- [Getting started with phpmyadmin](https://riptutorial.com/phpmyadmin)
-- [TablePlus](https://tableplus.com/download)
-- [DataGrip](https://www.jetbrains.com/ru-ru/datagrip/)
-- [DATAGRIP QUICK START GUIDE](https://www.jetbrains.com/datagrip/quick-start/)
-- [Connecting DataGrip to MS SQL Server](https://blog.jetbrains.com/datagrip/2016/06/21/connecting-datagrip-to-ms-sql-server/)
-- [DataGrip Database connection](https://www.jetbrains.com/help/datagrip/connecting-to-a-database.html)
-- [DataGrip Импорт и экспорт параметров](https://www.jetbrains.com/ru-ru/datagrip/features/importexport.html)
-- [mysqldump — A Database Backup Program](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html)
-- [pg_dump](https://www.postgresql.org/docs/9.5/app-pgdump.html)
-- [SQL Server Express does not enable TCP support by default](https://www.papercut.com/support/resources/manuals/ng-mf/common/topics/ext-db-specific-ms-sql-express.html)
-- [Extension=php_sqlsrv.dll](https://docs.microsoft.com/en-us/sql/connect/php/download-drivers-php-sql-server?view=sql-server-ver15)
-- [Docker db migrate](https://www.digitalocean.com/community/tutorials/how-to-use-database-migrations-and-seeders-to-abstract-database-setup-in-laravel-ru)
-- [SQL List All Tables](https://www.sqltutorial.org/sql-list-all-tables/)
-- [Examples: Azure Synapse Analytics and Parallel Data Warehouse](https://docs.microsoft.com/en-us/sql/t-sql/functions/db-name-transact-sql?redirectedfrom=MSDN&view=sql-server-ver15)
-- [Tutorial: Build a PHP and MySQL app in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/tutorial-php-mysql-app?pivots=platform-windows)
-- [ MySQL Community Downloads](https://dev.mysql.com/downloads/file/?id=505212)
-- [mysql-installer-web-community-8.0.25.0.msi](https://cdn.mysql.com//Downloads/MySQLInstaller/mysql-installer-web-community-8.0.25.0.msi)
 
 > DataGrip поддерживает работу с mysqldump и pg_dump.
 > Чтобы создать копию базы, используйте пункт **Dump with…**
