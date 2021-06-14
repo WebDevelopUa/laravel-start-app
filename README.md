@@ -117,7 +117,7 @@ php artisan route:clear && php artisan key:generate && php artisan serve
     - right click on database connection => **Restore with mysql** =>
       path: `C:/Program Files/MySQL/MySQL Workbench 8.0/mysql.exe`
       => `--database="sampledb" < "D:\\projects\\!db-dump\\dump-sampleDB-01.sql" `
-    - refresh BD (Database tab)
+    - refresh BD (Database tab) && right click => Database Tools => **Manage Shown Schemas ...**
     - [msqldump docs](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
     - [msql docs](https://dev.mysql.com/doc/refman/8.0/en/mysql-batch-commands.html)
 
