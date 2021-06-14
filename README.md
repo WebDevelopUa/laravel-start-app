@@ -109,11 +109,22 @@ php artisan route:clear && php artisan key:generate && php artisan serve
 
 ----
 
-6) ## Create `sampledb` dump:
+6) ## Create `sampledb` dump (`mysql -u root -p && CREATE DATABASE sampledb; quit && php artisan migrate`):
     - connect to Database: Menu => View => Tool Windows => Database => + => Data Source => MySQL => ... => Test => OK
-    - right click on database connection => Export with mysqldump =>
+    - right click on database connection => **Export with mysqldump** =>
       path: `C:/Program Files/MySQL/MySQL Workbench 8.0/mysqldump.exe`
-      => `--result-file="D:\\projects\\!db-dump\\dump-sampleDB-01.sql"`
+      => ` --result-file="D:\\projects\\!db-dump\\dump-sampleDB-01.sql"  --databases sampledb `
+    - right click on database connection => **Restore with mysql** =>
+      path: `C:/Program Files/MySQL/MySQL Workbench 8.0/mysql.exe`
+      => `--database="sampledb" < "D:\\projects\\!db-dump\\dump-sampleDB-01.sql" `
+    - refresh BD (Database tab)
+    - [msqldump docs](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
+    - [msql docs](https://dev.mysql.com/doc/refman/8.0/en/mysql-batch-commands.html)
+
+``` 
+mysqldump -u user -p database > backup.sql
+mysql -u user -p database < backup.sql
+```
 
 7) ## Other options to fix possible issues:
 
