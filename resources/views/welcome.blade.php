@@ -399,7 +399,7 @@
     @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             @auth
-                <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
             @else
                 <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
 
@@ -417,7 +417,7 @@
         <nav class="text-gray-900 dark:text-white">
             <a href="{{route('wc')}}">Welcome</a>
             &#124;
-            <a href="{{url('/home')}}">Home</a>
+            <a href="{{url('/dashboard')}}">Dashboard</a>
             &#124;
             <a href="{{url('/new_controller?adult=18')}}">New</a>
         </nav>

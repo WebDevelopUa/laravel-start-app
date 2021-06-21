@@ -622,6 +622,8 @@ php artisan serve
 
 Go to [localhost:8000/dashboard](http://localhost:8000/dashboard)
 
+> How to install: [link](https://dev.to/kingsconsult/laravel-8-auth-registration-and-login-32jl)
+
 ```
 osql -Uadmin -Padmin
 exit
