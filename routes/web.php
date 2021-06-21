@@ -32,6 +32,7 @@ Route::get("/new_controller", [NewController::class, "index"])
     ->middleware("adult")
     ->name("new");
 
+// Dashboard route
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
