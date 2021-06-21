@@ -638,3 +638,21 @@ go
 > из контекстного меню источника данных.
 > Инструменты восстановления для MySQL и PostgreSQL тоже вызывайте из контекстного меню.
 > Для PostgreSQL можно восстанавливать двумя утилитами: pg_dump или psql. Выберите нужную в диалоговом окне.
+
+## Error:
+
+> GET http://localhost:3000/browser-sync/browser-sync-client.js net::ERR_CONNECTION_REFUSED
+
+Install packages:
+
+- [browser-sync](https://www.npmjs.com/package/browser-sync)
+- [browser-sync-webpack-plugin](https://www.npmjs.com/package/browser-sync-webpack-plugin)
+
+Edit [webpack.mix.js](webpack.mix.js)
+
+``` 
+mix.browserSync('http://localhost:8000/');
+```
+
+Check the result: [localhost:8000/user/profile](http://localhost:8000/user/profile)
+BrowserSync: [localhost:3001](http://localhost:3001)
