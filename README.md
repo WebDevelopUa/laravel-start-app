@@ -608,6 +608,7 @@ php artisan optimize
 ```
 mysql -u root -p
 SET GLOBAL time_zone = '+3:00';
+timeZone=UTC
 
 mysql
 CREATE DATABASE sampledb;
@@ -658,3 +659,54 @@ mix.browserSync('http://localhost:8000/');
 
 Check the result: [localhost:8000/user/profile](http://localhost:8000/user/profile)
 BrowserSync: [localhost:3001](http://localhost:3001)
+
+21) Create custom Dashboard elements:
+
+> STEPS:
+
+> {{--Dashboard view--}}  
+resources/views/[dashboard.blade.php](resources/views/dashboard.blade.php)  
+> Add hardcoded data
+
+> {{-- Dashboard navbar --}}  
+resources/views/[navigation-menu.blade.php](resources/views/navigation-menu.blade.php)
+
+> // Dashboard route  
+routes/[web.php](routes/web.php)
+
+> Result table:  
+http://127.0.0.1:8000/dashboard
+
+> Read DB data:  
+> {{-- Get data from Database: "sampledb", table: "users" --}}  
+> resources/views/[dashboard.blade.php](resources/views/dashboard.blade.php)
+
+``` 
+@php($i=1)
+@foreach($users as $user)
+    <tr>
+        <th scope="row">{{$i++}}</th>
+        <td>{{$user->name}}</td>
+        <td>{{$user->email}}</td>
+        <td>{{$user->created_at}}</td>
+    </tr>
+@endforeach
+```
+
+> Create or Use Model  
+> app/Models/[User.php](app/Models/User.php)  
+> Change Route  
+> routes/[web.php](routes/web.php)
+
+```
+use AppModelsUser;
+
+// Dashboard route + Add UserModel (use AppModelsUser;)
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//    get all User DB Data
+    $users = User::all();
+//    pass DB Data to Dashboard
+    return view('dashboard', compact('users'));
+})->name('dashboard');
+
+```

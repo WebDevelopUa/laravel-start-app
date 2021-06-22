@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -32,7 +33,10 @@ Route::get("/new_controller", [NewController::class, "index"])
     ->middleware("adult")
     ->name("new");
 
-// Dashboard route
+// Dashboard route + Add UserModel (use AppModelsUser;)
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+//    get all User DB Data
+    $users = User::all();
+//    pass DB Data to Dashboard
+    return view('dashboard', compact('users'));
 })->name('dashboard');
